@@ -1,16 +1,62 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
-    <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuyList</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+  <div class="container">
+    <div class="column left">
+      <div class="add-bar">
+        <input type="text" placeholder="Назва товару" />
+        <button class="btn blue" data-tooltip="Додати товар">Додати</button>
+      </div>
+
+      <div class="item bought">
+        <span class="name bought">Помідори</span>
+        <span class="count-box">2</span>
+        <button class="btn gray" data-tooltip="Зробити не купленим">Не куплено</button>
+      </div>
+
+      <div class="item">
+        <span class="name">Печиво</span>
+        <div class="counter">
+          <button class="btn red" data-tooltip="Зменшити">−</button>
+          <span class="count-box">2</span>
+          <button class="btn green" data-tooltip="Збільшити">+</button>
+        </div>
+        <button class="btn gray" data-tooltip="Позначити як куплене">Куплено</button>
+        <button class="btn delete" data-tooltip="Видалити">✖</button>
+      </div>
+
+      <div class="item">
+        <input class="inline-input" type="text" value="Сир" />
+        <div class="counter">
+          <button class="btn red" data-tooltip="Зменшити">−</button>
+          <span class="count-box">1</span>
+          <button class="btn green" data-tooltip="Збільшити">+</button>
+        </div>
+        <button class="btn gray" data-tooltip="Позначити як куплене">Куплено</button>
+        <button class="btn delete" data-tooltip="Видалити">✖</button>
+      </div>
+    </div>
+
+    <div class="column right">
+      <h3>Залишилося</h3>
+      <div class="badge">Печиво <span>2</span></div>
+      <div class="badge">Сир <span>1</span></div>
+
+      <h3>Куплено</h3>
+      <div class="badge bought">Помідори <span>2</span></div>
+    </div>
+  </div>
+
+ 
+  <div class="footer-badge" id="author-badge">
+    BuyList
+    <span class="hover-text">Робота: Артем Гочнаренко</span>
+  </div>
 </body>
 </html>
